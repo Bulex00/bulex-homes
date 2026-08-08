@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Matcher | Bulex Homes</title>
+  <meta name="description" content="Use Bulex Homes smart matcher to discover the right property fit for your goals and budget.">
+  <link rel="icon" type="image/png" href="bulex-homes-logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="brand-logo" aria-label="Bulex Homes home">
+        <img src="bulex-homes-logo.png" alt="Bulex Homes logo">
+        <span>Bulex Homes</span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <ul class="nav-menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="properties.html">Properties</a></li>
+          <li><a href="smart-matcher.html" class="active">Smart Matcher</a></li>
+          <li><a href="compare.html">Compare Homes</a></li>
+          <li><a href="agents.html">Agents</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="nav-actions">
+        <button class="theme-toggle" type="button" aria-label="Toggle dark mode"><i class="fas fa-moon"></i></button>
+        <a class="btn btn-primary nav-cta" href="book-viewing.html"><i class="fas fa-calendar-check"></i> Book Viewing</a>
+        <button class="hamburger" type="button" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="page-header properties-header premium-hero-surface smart-matcher-hero">
+      <div class="container">
+        <div class="premium-hero-copy">
+          <p class="eyebrow">Smart Matcher</p>
+          <h1>Find homes that fit your lifestyle in minutes.</h1>
+          <p>Answer a few quick questions and Bulex Homes will surface the strongest matches for your goals with clarity and confidence.</p>
+          <div class="premium-hero-actions">
+            <a href="#matcher-form" class="btn btn-primary"><i class="fas fa-magic"></i> Start Matching</a>
+            <a href="compare.html" class="btn btn-dark"><i class="fas fa-list-check"></i> Compare Homes</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <p class="eyebrow">Tell us what matters</p>
+          <h2>Choose your ideal property profile.</h2>
+        </div>
+
+        <div class="card premium-matcher-card" id="matcher-panel" style="max-width: 1000px; margin: 0 auto; padding: 2rem; border-radius: 22px; background: var(--bg-card); box-shadow: var(--shadow); border: 1px solid var(--border);">
+          <div class="matcher-intro">
+            <p class="eyebrow">Luxury matching</p>
+            <h3>Tell us what matters most and we’ll narrow the field.</h3>
+          </div>
+          <div class="matcher-support">
+            <span><i class="fas fa-shield-alt"></i> Tailored recommendations</span>
+            <span><i class="fas fa-chart-line"></i> Ranked by lifestyle fit</span>
+          </div>
+          <form id="matcher-form">
+            <div class="form-grid premium-form-grid">
+              <label class="premium-field">
+                <span>What are you looking for?</span>
+                <select id="goal" required>
+                  <option value="buy">Buy a home</option>
+                  <option value="rent">Rent a home</option>
+                  <option value="invest">Invest in property</option>
+                </select>
+              </label>
+
+              <label class="premium-field">
+                <span>Preferred budget</span>
+                <select id="budget" required>
+                  <option value="50m">Under ₦50m</option>
+                  <option value="100m">₦50m - ₦100m</option>
+                  <option value="250m">₦100m - ₦250m</option>
+                  <option value="500m">₦250m+</option>
+                </select>
+              </label>
+
+              <label class="premium-field">
+                <span>Best neighborhood</span>
+                <select id="location" required>
+                  <option value="lekki">Lekki</option>
+                  <option value="ikoyi">Ikoyi</option>
+                  <option value="vi">Victoria Island</option>
+                  <option value="ajah">Ajah</option>
+                  <option value="ikeja">Ikeja</option>
+                  <option value="yaba">Yaba</option>
+                </select>
+              </label>
+
+              <label class="premium-field">
+                <span>Top priority</span>
+                <select id="priority" required>
+                  <option value="security">Security</option>
+                  <option value="yield">Rental yield</option>
+                  <option value="space">More space</option>
+                  <option value="access">Easy commute</option>
+                </select>
+              </label>
+            </div>
+            <button class="btn btn-primary premium-submit-btn" type="submit"><i class="fas fa-magic"></i> Match My Home</button>
+          </form>
+        </div>
+
+        <div id="matcher-results" class="properties-grid matcher-results"></div>
+      </div>
+    </section>
+  </main>
+
+  <script src="main.js"></script>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="index.html" class="footer-brand">
+            <img src="bulex-homes-logo.png"
+     alt="Bulex Homes logo"
+     loading="lazy"
+     width="180"
+     height="60" loading="eager">
+          </a>
+          <p>Bulex Homes connects clients with verified homes, investment opportunities, and trusted real estate guidance across Lagos.</p>
+          <div class="social-links">
+            <a href="https://www.facebook.com/profile.php?id=61579539584737&mibextid=rS40aB7S9Ucbxw6v" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://x.com/AdegbiteAbdull8" target="_blank" rel="noopener" aria-label="X"><i class="fab fa-x-twitter"></i></a>
+            <a href="https://www.instagram.com/abdullahiadegbiite?igsh=djc5a2Nzbnl6cnU5" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/adegbite-abdullahi-041350308" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://github.com/Bulex00" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://wa.me/message/LBRFONB553XBF1" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="properties.html">Properties</a></li>
+            <li><a href="smart-matcher.html">Smart Matcher</a></li>
+            <li><a href="mortgage-calculator.html">Mortgage Calculator</a></li>
+            <li><a href="book-viewing.html">Book Viewing</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="tel:09168827887">09168827887</a></li>
+            <li><a href="tel:09029418166">09029418166</a></li>
+            <li><a href="tel:07050803661">07050803661</a></li>
+            <li><a href="mailto:info@bulexhomes.ng">info@bulexhomes.ng</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Newsletter</h4>
+          <p>Receive fresh listings, price changes, and investment notes.</p>
+          <form class="newsletter-form">
+            <input type="email" placeholder="Your email" required aria-label="Email for footer newsletter">
+            <button type="submit">Join</button>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom"><span>
+    © <span id="year"></span> Bulex Homes. All rights reserved.
+    </span><div><a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms.html">Terms</a></div></div>
+</div>
+  </footer>
+
+  <a class="whatsapp-fab" href="https://wa.me/message/LBRFONB553XBF1" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><i class="fab fa-whatsapp"></i></a>
+  <button class="back-to-top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+  <script src="main.js"></script>
+
+
+
+  <script>
+    const form = document.getElementById('matcher-form');
+    const results = document.getElementById('matcher-results');
+
+    const propertyPool = [
+      {
+        title: 'Luxury 5-Bedroom Villa',
+        price: '₦150,000,000',
+        location: 'Lekki Phase 1',
+        beds: '5 Beds',
+        baths: '6 Baths',
+        size: '700 sqm',
+        match: 'Perfect for buyers who want space and security.',
+        score: 96,
+        reason: 'Elite security, large living space, and strong appreciation.'
+      },
+      {
+        title: 'Modern 3-Bedroom Apartment',
+        price: '₦8,500,000/year',
+        location: 'Ikoyi',
+        beds: '3 Beds',
+        baths: '3 Baths',
+        size: '350 sqm',
+        match: 'Excellent for renters prioritizing premium access and comfort.',
+        score: 93,
+        reason: 'Great for premium renting with concierge-style amenities.'
+      },
+      {
+        title: 'Waterfront Penthouse Suite',
+        price: '₦280,000,000',
+        location: 'Victoria Island',
+        beds: '4 Beds',
+        baths: '5 Baths',
+        size: '450 sqm',
+        match: 'Suitable for investors seeking premium returns and prestige.',
+        score: 95,
+        reason: 'High rental demand and exceptional long-term value.'
+      },
+      {
+        title: 'Family Duplex in Ajah',
+        price: '₦95,000,000',
+        location: 'Ajah',
+        beds: '4 Beds',
+        baths: '4 Baths',
+        size: '520 sqm',
+        match: 'Great for buyers balancing value, space, and neighborhood growth.',
+        score: 91,
+        reason: 'Strong family fit and excellent price-to-space ratio.'
+      },
+      {
+        title: 'Terraced Smart Duplex',
+        price: '₦98,000,000',
+        location: 'Osapa, Lekki',
+        beds: '4 Beds',
+        baths: '5 Baths',
+        size: '360 sqm',
+        match: 'Best for buyers wanting smart-home features and a modern layout.',
+        score: 94,
+        reason: 'Modern tech features and strong resale potential.'
+      }
+    ];
+
+    form?.addEventListener('submit', (event) => {
+      event.preventDefault();
+      const goal = document.getElementById('goal').value;
+      const budget = document.getElementById('budget').value;
+      const location = document.getElementById('location').value;
+      const priority = document.getElementById('priority').value;
+
+      const matches = propertyPool
+        .filter((property) => {
+          if (goal === 'rent' && property.price.includes('/year')) return true;
+          if (goal === 'invest' && (property.location.includes('Victoria') || property.location.includes('Lekki'))) return true;
+          if (goal === 'buy' && !property.price.includes('/year')) return true;
+          return true;
+        })
+        .filter((property) => {
+          if (location === 'lekki' && property.location.includes('Lekki')) return true;
+          if (location === 'ikoyi' && property.location.includes('Ikoyi')) return true;
+          if (location === 'vi' && property.location.includes('Victoria')) return true;
+          if (location === 'ajah' && property.location.includes('Ajah')) return true;
+          if (location === 'ikeja' && property.location.includes('Lekki') === false && property.location.includes('Ajah') === false) return true;
+          if (location === 'yaba' && property.location.includes('Yaba')) return true;
+          return true;
+        })
+        .filter((property) => {
+          if (priority === 'security') return property.reason.includes('security') || property.reason.includes('premium');
+          if (priority === 'yield') return property.title.includes('Penthouse') || property.title.includes('Villa');
+          if (priority === 'space') return property.beds.includes('5') || property.beds.includes('4');
+          if (priority === 'access') return property.location.includes('Ikoyi') || property.location.includes('Victoria');
+          return true;
+        })
+        .sort((a, b) => b.score - a.score)
+        .slice(0, 3);
+
+      results.innerHTML = matches.map(property => `
+        <article class="property-card matcher-result-card">
+          <div class="property-image">
+            <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&q=80" alt="${property.title}">
+            <span class="badge badge-sale">Top Match</span>
+          </div>
+          <div class="property-info">
+            <div class="match-score">${property.score}% Fit</div>
+            <p class="price">${property.price}</p>
+            <h3>${property.title}</h3>
+            <p class="location"><i class="fas fa-map-marker-alt"></i> ${property.location}</p>
+            <p>${property.match}</p>
+            <p class="matcher-reason"><i class="fas fa-check-circle"></i> ${property.reason}</p>
+            <div class="property-meta">
+              <span><i class="fas fa-bed"></i> ${property.beds}</span>
+              <span><i class="fas fa-bath"></i> ${property.baths}</span>
+              <span><i class="fas fa-ruler-combined"></i> ${property.size}</span>
+            </div>
+            <a href="property-details.html" class="btn btn-dark" style="margin-top:1rem;">View Details</a>
+          </div>
+        </article>
+      `).join('');
+    });
+  </script>
+</body>
+</html>

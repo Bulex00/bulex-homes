@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Browse verified Bulex Homes properties for sale and rent across Lekki, Ikoyi, Victoria Island, Ajah, Ikeja, and Lagos mainland.">
+  <meta name="theme-color" content="#07111f">
+  <title>Properties | Bulex Homes</title>
+  <link rel="icon" type="image/png" href="bulex-homes-logo.png">
+  <link rel="apple-touch-icon" href="bulex-homes-logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <div class="site-loader" aria-label="Loading Bulex Homes"><img src="bulex-homes-logo.png" alt="Bulex Homes logo"><span></span></div>
+
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="brand-logo" aria-label="Bulex Homes home"><img src="bulex-homes-logo.png" alt="Bulex Homes logo"><span>Bulex Homes</span></a>
+      <nav aria-label="Primary navigation">
+        <ul class="nav-menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="properties.html">Properties</a></li>
+          <li><a href="agents.html">Agents</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="nav-actions">
+        <button class="theme-toggle" type="button" aria-label="Toggle dark mode"><i class="fas fa-moon"></i></button>
+        <a class="btn btn-primary nav-cta" href="book-viewing.html"><i class="fas fa-calendar-check"></i> Book Viewing</a>
+        <button class="hamburger" type="button" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+     <section class="page-header">
+      <div class="container">
+        <p class="eyebrow">Verified Lagos Listings</p>
+        <h1>Find the right home, deal, or investment.</h1>
+        <p>Filter premium homes by location, budget, lifestyle features, and investment potential. Save favorites and compare up to three properties.</p>
+      </div>
+    </section>
+
+    <section class="filter-bar advanced-filter" aria-label="Property filters">
+      <div class="container">
+        <div class="filter-toolbar">
+          <div class="search-wrap">
+            <i class="fas fa-search"></i>
+            <input id="property-search" type="search" placeholder="Search by name, city, neighborhood, or type" aria-label="Search properties">
+          </div>
+          <select id="sort-properties" aria-label="Sort properties">
+            <option value="newest">Newest</option>
+            <option value="oldest">Oldest</option>
+            <option value="price-low">Price: Low to High</option>
+            <option value="price-high">Price: High to Low</option>
+            <option value="investment">Best Investment Score</option>
+            <option value="viewed">Most Viewed</option>
+          </select>
+        </div>
+        <div class="filter-form">
+          <select id="filter-location" aria-label="Filter by location">
+            <option value="all">All Locations</option>
+            <option value="lekki">Lekki</option>
+            <option value="ikoyi">Ikoyi</option>
+            <option value="victoria-island">Victoria Island</option>
+            <option value="ajah">Ajah</option>
+            <option value="ikeja">Ikeja</option>
+            <option value="yaba">Yaba</option>
+          </select>
+          <select id="filter-type" aria-label="Filter by property type">
+            <option value="all">All Types</option>
+            <option value="apartment">Apartment</option>
+            <option value="duplex">Duplex</option>
+            <option value="villa">Villa</option>
+            <option value="penthouse">Penthouse</option>
+            <option value="commercial">Commercial</option>
+            <option value="land">Land</option>
+          </select>
+          <select id="filter-price" aria-label="Filter by price range">
+            <option value="all">All Prices</option>
+            <option value="under-50m">Under ₦50M</option>
+            <option value="50m-100m">₦50M - ₦100M</option>
+            <option value="above-100m">Above ₦100M</option>
+          </select>
+          <select id="filter-bedrooms" aria-label="Filter by bedrooms">
+            <option value="all">All Bedrooms</option>
+            <option value="2">2+ Beds</option>
+            <option value="3">3+ Beds</option>
+            <option value="4">4+ Beds</option>
+            <option value="5">5+ Beds</option>
+          </select>
+          <select id="filter-feature" aria-label="Filter by feature">
+            <option value="all">Any Feature</option>
+            <option value="pool">Swimming Pool</option>
+            <option value="garden">Garden</option>
+            <option value="security">Security</option>
+            <option value="furnished">Furnished</option>
+            <option value="balcony">Balcony</option>
+            <option value="investment">Investment Potential</option>
+          </select>
+        </div>
+        <div class="results-line"><strong id="results-count">15</strong> properties found <button type="button" id="clear-filters">Clear filters</button></div>
+      </div>
+    </section>
+
+    <section class="properties-section">
+      <div class="container">
+        <div class="properties-grid listing-grid">
+          <article class="property-card" data-id="lekki-villa-001" data-location="lekki" data-type="villa" data-price="150000000" data-bedrooms="5" data-investment="92" data-viewed="420" data-date="2026-07-29" data-features="pool garden security balcony investment" data-title="Luxury 5-Bedroom Villa Lekki Phase 1">
+            <div class="property-image"><img loading="lazy" src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=700&q=80" alt="Luxury villa in Lekki"><span class="badge badge-sale">Available</span><span class="ribbon">Featured</span><button class="icon-btn favorite-btn" type="button" aria-label="Save property"><i class="far fa-heart"></i></button><label class="compare-checkbox"><input type="checkbox" aria-label="Compare Luxury 5-Bedroom Villa"></label></div>
+            <div class="property-info"><p class="price">₦150,000,000</p><h3>Luxury 5-Bedroom Villa</h3><p class="location"><i class="fas fa-map-marker-alt"></i> Lekki Phase 1, Lagos</p><div class="score-row"><span>Mortgage est.</span><strong>₦1.4m/mo</strong></div><div class="score-row"><span>Investment Score</span><strong>92%</strong></div><div class="property-meta"><span><i class="fas fa-bed"></i> 5 Beds</span><span><i class="fas fa-bath"></i> 6 Baths</span><span><i class="fas fa-car"></i> 3 Parking</span><span><i class="fas fa-ruler-combined"></i> 600 sqm</span></div><div class="card-actions"><a href="property-details.html?id=lekki-villa-001" class="btn btn-dark">View Details</a><button class="share-btn" type="button"><i class="fas fa-share-nodes"></i></button></div></div>
+          </article>
+
+          <article class="property-card" data-id="ikoyi-apartment-002" data-location="ikoyi" data-type="apartment" data-price="8500000" data-bedrooms="3" data-investment="86" data-viewed="380" data-date="2026-07-28" data-features="furnished security balcony" data-title="Modern 3-Bedroom Apartment Ikoyi">
+            <div class="property-image"><img loading="lazy" src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=700&q=80" alt="Modern apartment in Ikoyi"><span class="badge badge-rent">New Listing</span><span class="ribbon">Verified</span><button class="icon-btn favorite-btn" type="button" aria-label="Save property"><i class="far fa-heart"></i></button><label class="compare-checkbox"><input type="checkbox" aria-label="Compare Modern Apartment"></label></div>
+            <div class="property-info"><p class="price">₦8,500,000/year</p><h3>Modern 3-Bedroom Apartment</h3><p class="location"><i class="fas fa-map-marker-alt"></i> Ikoyi, Lagos</p><div class="score-row"><span>Neighborhood Score</span><strong>95%</strong></div><div class="score-row"><span>Investment Score</span><strong>86%</strong></div><div class="property-meta"><span><i class="fas fa-bed"></i> 3 Beds</span><span><i class="fas fa-bath"></i> 3 Baths</span><span><i class="fas fa-car"></i> 2 Parking</span><span><i class="fas fa-ruler-combined"></i> 350 sqm</span></div><div class="card-actions"><a href="property-details.html?id=ikoyi-apartment-002" class="btn btn-dark">View Details</a><button class="share-btn" type="button"><i class="fas fa-share-nodes"></i></button></div></div>
+          </article>
+
+          <article class="property-card" data-id="vi-penthouse-003" data-location="victoria-island" data-type="penthouse" data-price="280000000" data-bedrooms="4" data-investment="94" data-viewed="512" data-date="2026-07-25" data-features="pool furnished security balcony investment" data-title="Waterfront Penthouse Suite Victoria Island">
+            <div class="property-image"><img loading="lazy" src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=700&q=80" alt="Waterfront penthouse in Victoria Island"><span class="badge badge-sale">Available</span><span class="ribbon">Luxury</span><button class="icon-btn favorite-btn" type="button" aria-label="Save property"><i class="far fa-heart"></i></button><label class="compare-checkbox"><input type="checkbox" aria-label="Compare Waterfront Penthouse"></label></div>
+            <div class="property-info"><p class="price">₦280,000,000</p><h3>Waterfront Penthouse Suite</h3><p class="location"><i class="fas fa-map-marker-alt"></i> Victoria Island, Lagos</p><div class="score-row"><span>Rental Yield</span><strong>8.4%</strong></div><div class="score-row"><span>Investment Score</span><strong>94%</strong></div><div class="property-meta"><span><i class="fas fa-bed"></i> 4 Beds</span><span><i class="fas fa-bath"></i> 5 Baths</span><span><i class="fas fa-car"></i> 3 Parking</span><span><i class="fas fa-ruler-combined"></i> 450 sqm</span></div><div class="card-actions"><a href="property-details.html?id=vi-penthouse-003" class="btn btn-dark">View Details</a><button class="share-btn" type="button"><i class="fas fa-share-nodes"></i></button></div></div>
+          </article>
+
+          <article class="property-card" data-id="ajah-duplex-004" data-location="ajah" data-type="duplex" data-price="45000000" data-bedrooms="4" data-investment="82" data-viewed="214" data-date="2026-07-16" data-features="garden security investment" data-title="Contemporary 4-Bedroom Duplex Ajah">
+            <div class="property-image"><img loading="lazy" src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=700&q=80" alt="Contemporary duplex in Ajah"><span class="badge badge-sale">Price Reduced</span><span class="ribbon">Hot Deal</span><button class="icon-btn favorite-btn" type="button" aria-label="Save property"><i class="far fa-heart"></i></button><label class="compare-checkbox"><input type="checkbox" aria-label="Compare Contemporary Duplex"></label></div>
+            <div class="property-info"><p class="price">₦45,000,000</p><h3>Contemporary 4-Bedroom Duplex</h3><p class="location"><i class="fas fa-map-marker-alt"></i> Ajah, Lagos</p><div class="score-row"><span>Mortgage est.</span><strong>₦430k/mo</strong></div><div class="score-row"><span>Investment Score</span><strong>82%</strong></div><div class="property-meta"><span><i class="fas fa-bed"></i> 4 Beds</span><span><i class="fas fa-bath"></i> 4 Baths</span><span><i class="fas fa-car"></i> 2 Parking</span><span><i class="fas fa-ruler-combined"></i> 400 sqm</span></div><div class="card-actions"><a href="property-details.html?id=ajah-duplex-004" class="btn btn-dark">View Details</a><button class="share-btn" type="button"><i class="fas fa-share-nodes"></i></button></div></div>
+          </article>
+
+          <article class="property-card" data-id="banana-mansion-005" data-location="ikoyi" data-type="villa" data-price="350000000" data-bedrooms="6" data-investment="90" data-viewed="601" data-date="2026-07-14" data-features="pool garden security balcony investment" data-title="Executive 6-Bedroom Mansion Banana Island">
+            <div class="property-image"><img loading="lazy" src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=700&q=80" alt="Executive mansion in Banana Island"><span class="badge badge-sale">Reserved</span><span class="ribbon">Exclusive</span><button class="icon-btn favorite-btn" type="button" aria-label="Save property"><i class="far fa-heart"></i></button><label class="compare-checkbox"><input type="checkbox" aria-label="Compare Executive Mansion"></label></div>
+            <div class="property-info"><p class="price">₦350,000,000</p><h3>Executive 6-Bedroom Mansion</h3><p class="location"><i class="fas fa-map-marker-alt"></i> Banana Island, Ikoyi</p><div class="score-row"><span>Neighborhood Score</span><strong>98%</strong></div><div class="score-row"><span>Investment Score</span><strong>90%</strong></div><div class="property-meta"><span><i class="fas fa-bed"></i> 6 Beds</span><span><i class="fas fa-bath"></i> 7 Baths</span><span><i class="fas fa-car"></i> 4 Parking</span><span><i class="fas fa-ruler-combined"></i> 900 sqm</span></div><div class="card-actions"><a href="property-details.html?id=banana-mansion-005" class="btn btn-dark">View Details</a><button class="share-btn" type="button"><i class="fas fa-share-nodes"></i></button></div></div>
+          </article>
+
+          <article class="property-card" data-id="vi-serviced-006" data-location="victoria-island" data-type="apartment" data-price="12000000" data-bedrooms="2" data-investment="84" data-viewed="289" data-date="2026-07-20" data-features="furnished security balcony" data-title="Luxury 2-Bedroom Serviced Apartment Victoria Island">
+            <div class="property-image"><img loading="lazy" src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=700&q=80" alt="Serviced apartment in Victoria Island"><span class="badge badge-rent">Available</span><span class="ribbon">Open House</span><button class="icon-btn favorite-btn" type="button" aria-label="Save property"><i class="far fa-heart"></i></button><label class="compare-checkbox"><input type="checkbox" aria-label="Compare Serviced Apartment"></label></div>
+            <div class="property-info"><p class="price">₦12,000,000/year</p><h3>Luxury 2-Bedroom Serviced Apartment</h3><p class="location"><i class="fas fa-map-marker-alt"></i> Victoria Island, Lagos</p><div class="score-row"><span>Neighborhood Score</span><strong>93%</strong></div><div class="score-row"><span>Investment Score</span><strong>84%</strong></div><div class="property-meta"><span><i class="fas fa-bed"></i> 2 Beds</span><span><i class="fas fa-bath"></i> 2 Baths</span><span><i class="fas fa-car"></i> 1 Parking</span><span><i class="fas fa-ruler-combined"></i> 180 sqm</span></div><div class="card-actions"><a href="property-details.html?id=vi-serviced-006" class="btn btn-dark">View Details</a><button class="share-btn" type="button"><i class="fas fa-share-nodes"></i></button></div></div>
+          </article>
+
+          <article class="property-card" data-id="ikeja-townhouse-007" data-location="ikeja" data-type="duplex" data-price="78000000" data-bedrooms="4" data-investment="88" data-viewed="246" data-date="2026-07-21" data-features="garden security investment" data-title="GRA 4-Bedroom Townhouse Ikeja">
+            <div class="property-image"><img loading="lazy" src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=700&q=80" alt="Townhouse in Ikeja GRA"><span class="badge badge-sale">Available</span><span class="ribbon">Verified</span><button class="icon-btn favorite-btn" type="button" aria-label="Save property"><i class="far fa-heart"></i></button><label class="compare-checkbox"><input type="checkbox" aria-label="Compare Ikeja Townhouse"></label></div>
+            <div class="property-info"><p class="price">₦78,000,000</p><h3>GRA 4-Bedroom Townhouse</h3><p class="location"><i class="fas fa-map-marker-alt"></i> Ikeja GRA, Lagos</p><div class="score-row"><span>Mortgage est.</span><strong>₦745k/mo</strong></div><div class="score-row"><span>Investment Score</span><strong>88%</strong></div><div class="property-meta"><span><i class="fas fa-bed"></i> 4 Beds</span><span><i class="fas fa-bath"></i> 5 Baths</span><span><i class="fas fa-car"></i> 2 Parking</span><span><i class="fas fa-ruler-combined"></i> 430 sqm</span></div><div class="card-actions"><a href="property-details.html?id=ikeja-townhouse-007" class="btn btn-dark">View Details</a><button class="share-btn" type="button"><i class="fas fa-share-nodes"></i></button></div></div>
+          </article>
+
+          <article class="property-card" data-id="yaba-studio-008" data-location="yaba" data-type="apartment" data-price="3500000" data-bedrooms="1" data-investment="79" data-viewed="198" data-date="2026-07-10" data-features="furnished security" data-title="Smart Studio Apartment Yaba">
+            <div class="property-image"><img loading="lazy" src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=700&q=80" alt="Smart studio apartment in Yaba"><span class="badge badge-rent">Available</span><span class="ribbon">Student Fit</span><button class="icon-btn favorite-btn" type="button" aria-label="Save property"><i class="far fa-heart"></i></button><label class="compare-checkbox"><input type="checkbox" aria-label="Compare Yaba Studio"></label></div>
+            <div class="property-info"><p class="price">₦3,500,000/year</p><h3>Smart Studio Apartment</h3><p class="location"><i class="fas fa-map-marker-alt"></i> Yaba, Lagos</p><div class="score-row"><span>Commute Score</span><strong>89%</strong></div><div class="score-row"><span>Investment Score</span><strong>79%</strong></div><div class="property-meta"><span><i class="fas fa-bed"></i> 1 Bed</span><span><i class="fas fa-bath"></i> 1 Bath</span><span><i class="fas fa-car"></i> 1 Parking</span><span><i class="fas fa-ruler-combined"></i> 72 sqm</span></div><div class="card-actions"><a href="property-details.html?id=yaba-studio-008" class="btn btn-dark">View Details</a><button class="share-btn" type="button"><i class="fas fa-share-nodes"></i></button></div></div>
+          </article>
+
+          <article class="property-card" data-id="lekki-land-009" data-location="lekki" data-type="land" data-price="62000000" data-bedrooms="0" data-investment="91" data-viewed="331" data-date="2026-07-19" data-features="investment security" data-title="Dry Land Plot Chevron Lekki">
+            <div class="property-image"><img loading="lazy" src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=700&q=80" alt="Dry land plot in Lekki"><span class="badge badge-sale">Available</span><span class="ribbon">Land</span><button class="icon-btn favorite-btn" type="button" aria-label="Save property"><i class="far fa-heart"></i></button><label class="compare-checkbox"><input type="checkbox" aria-label="Compare Lekki Land"></label></div>
+            <div class="property-info"><p class="price">₦62,000,000</p><h3>Dry Land Plot</h3><p class="location"><i class="fas fa-map-marker-alt"></i> Chevron, Lekki</p><div class="score-row"><span>Appreciation Forecast</span><strong>High</strong></div><div class="score-row"><span>Investment Score</span><strong>91%</strong></div><div class="property-meta"><span><i class="fas fa-tree"></i> Land</span><span><i class="fas fa-road"></i> Access Road</span><span><i class="fas fa-ruler-combined"></i> 650 sqm</span></div><div class="card-actions"><a href="property-details.html?id=lekki-land-009" class="btn btn-dark">View Details</a><button class="share-btn" type="button"><i class="fas fa-share-nodes"></i></button></div></div>
+          </article>
+
+          <article class="property-card" data-id="ajah-commercial-010" data-location="ajah" data-type="commercial" data-price="125000000" data-bedrooms="0" data-investment="87" data-viewed="175" data-date="2026-07-05" data-features="security investment" data-title="Roadside Commercial Building Ajah">
+            <div class="property-image"><img loading="lazy" src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=700&q=80" alt="Commercial building in Ajah"><span class="badge badge-sale">Available</span><span class="ribbon">Commercial</span><button class="icon-btn favorite-btn" type="button" aria-label="Save property"><i class="far fa-heart"></i></button><label class="compare-checkbox"><input type="checkbox" aria-label="Compare Ajah Commercial Building"></label></div>
+            <div class="property-info"><p class="price">₦125,000,000</p><h3>Roadside Commercial Building</h3><p class="location"><i class="fas fa-map-marker-alt"></i> Sangotedo, Ajah</p><div class="score-row"><span>Rental Yield</span><strong>9.1%</strong></div><div class="score-row"><span>Investment Score</span><strong>87%</strong></div><div class="property-meta"><span><i class="fas fa-building"></i> 3 Floors</span><span><i class="fas fa-car"></i> 8 Parking</span><span><i class="fas fa-ruler-combined"></i> 780 sqm</span></div><div class="card-actions"><a href="property-details.html?id=ajah-commercial-010" class="btn btn-dark">View Details</a><button class="share-btn" type="button"><i class="fas fa-share-nodes"></i></button></div></div>
+          </article>
+
+          <article class="property-card" data-id="lekki-terrace-011" data-location="lekki" data-type="duplex" data-price="98000000" data-bedrooms="4" data-investment="89" data-viewed="403" data-date="2026-07-27" data-features="pool security balcony investment" data-title="Terraced Smart Duplex Osapa Lekki">
+            <div class="property-image"><img loading="lazy" src="https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?w=700&q=80" alt="Terraced smart duplex in Lekki"><span class="badge badge-sale">New Listing</span><span class="ribbon">Smart Home</span><button class="icon-btn favorite-btn" type="button" aria-label="Save property"><i class="far fa-heart"></i></button><label class="compare-checkbox"><input type="checkbox" aria-label="Compare Smart Duplex"></label></div>
+            <div class="property-info"><p class="price">₦98,000,000</p><h3>Terraced Smart Duplex</h3><p class="location"><i class="fas fa-map-marker-alt"></i> Osapa, Lekki</p><div class="score-row"><span>Mortgage est.</span><strong>₦935k/mo</strong></div><div class="score-row"><span>Investment Score</span><strong>89%</strong></div><div class="property-meta"><span><i class="fas fa-bed"></i> 4 Beds</span><span><i class="fas fa-bath"></i> 5 Baths</span><span><i class="fas fa-car"></i> 2 Parking</span><span><i class="fas fa-ruler-combined"></i> 360 sqm</span></div><div class="card-actions"><a href="property-details.html?id=lekki-terrace-011" class="btn btn-dark">View Details</a><button class="share-btn" type="button"><i class="fas fa-share-nodes"></i></button></div></div>
+          </article>
+
+          <article class="property-card" data-id="ikoyi-maisonette-012" data-location="ikoyi" data-type="apartment" data-price="185000000" data-bedrooms="4" data-investment="85" data-viewed="266" data-date="2026-07-11" data-features="furnished security balcony pool" data-title="Luxury Maisonette Old Ikoyi">
+            <div class="property-image"><img loading="lazy" src="https://images.unsplash.com/photo-1600210491892-03d54c0aaf87?w=700&q=80" alt="Luxury maisonette in Old Ikoyi"><span class="badge badge-sale">Available</span><span class="ribbon">Luxury</span><button class="icon-btn favorite-btn" type="button" aria-label="Save property"><i class="far fa-heart"></i></button><label class="compare-checkbox"><input type="checkbox" aria-label="Compare Ikoyi Maisonette"></label></div>
+            <div class="property-info"><p class="price">₦185,000,000</p><h3>Luxury Maisonette</h3><p class="location"><i class="fas fa-map-marker-alt"></i> Old Ikoyi, Lagos</p><div class="score-row"><span>Neighborhood Score</span><strong>97%</strong></div><div class="score-row"><span>Investment Score</span><strong>85%</strong></div><div class="property-meta"><span><i class="fas fa-bed"></i> 4 Beds</span><span><i class="fas fa-bath"></i> 5 Baths</span><span><i class="fas fa-car"></i> 2 Parking</span><span><i class="fas fa-ruler-combined"></i> 410 sqm</span></div><div class="card-actions"><a href="property-details.html?id=ikoyi-maisonette-012" class="btn btn-dark">View Details</a><button class="share-btn" type="button"><i class="fas fa-share-nodes"></i></button></div></div>
+          </article>
+
+          <article class="property-card" data-id="ikeja-commercial-013" data-location="ikeja" data-type="commercial" data-price="220000000" data-bedrooms="0" data-investment="93" data-viewed="358" data-date="2026-07-23" data-features="security investment" data-title="Mixed-Use Commercial Plaza Ikeja">
+            <div class="property-image"><img loading="lazy" src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=700&q=80" alt="Mixed use commercial plaza in Ikeja"><span class="badge badge-sale">Available</span><span class="ribbon">Investor Pick</span><button class="icon-btn favorite-btn" type="button" aria-label="Save property"><i class="far fa-heart"></i></button><label class="compare-checkbox"><input type="checkbox" aria-label="Compare Ikeja Plaza"></label></div>
+            <div class="property-info"><p class="price">₦220,000,000</p><h3>Mixed-Use Commercial Plaza</h3><p class="location"><i class="fas fa-map-marker-alt"></i> Allen Avenue, Ikeja</p><div class="score-row"><span>Rental Yield</span><strong>10.2%</strong></div><div class="score-row"><span>Investment Score</span><strong>93%</strong></div><div class="property-meta"><span><i class="fas fa-building"></i> 12 Units</span><span><i class="fas fa-car"></i> 15 Parking</span><span><i class="fas fa-ruler-combined"></i> 1,100 sqm</span></div><div class="card-actions"><a href="property-details.html?id=ikeja-commercial-013" class="btn btn-dark">View Details</a><button class="share-btn" type="button"><i class="fas fa-share-nodes"></i></button></div></div>
+          </article>
+
+          <article class="property-card" data-id="ajah-family-014" data-location="ajah" data-type="duplex" data-price="68000000" data-bedrooms="5" data-investment="81" data-viewed="222" data-date="2026-07-08" data-features="garden security balcony" data-title="Family 5-Bedroom Detached Duplex Ajah">
+            <div class="property-image"><img loading="lazy" src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=700&q=80" alt="Family detached duplex in Ajah"><span class="badge badge-sale">Available</span><span class="ribbon">Family</span><button class="icon-btn favorite-btn" type="button" aria-label="Save property"><i class="far fa-heart"></i></button><label class="compare-checkbox"><input type="checkbox" aria-label="Compare Family Duplex"></label></div>
+            <div class="property-info"><p class="price">₦68,000,000</p><h3>Family 5-Bedroom Detached Duplex</h3><p class="location"><i class="fas fa-map-marker-alt"></i> Abraham Adesanya, Ajah</p><div class="score-row"><span>Family Score</span><strong>90%</strong></div><div class="score-row"><span>Investment Score</span><strong>81%</strong></div><div class="property-meta"><span><i class="fas fa-bed"></i> 5 Beds</span><span><i class="fas fa-bath"></i> 5 Baths</span><span><i class="fas fa-car"></i> 3 Parking</span><span><i class="fas fa-ruler-combined"></i> 520 sqm</span></div><div class="card-actions"><a href="property-details.html?id=ajah-family-014" class="btn btn-dark">View Details</a><button class="share-btn" type="button"><i class="fas fa-share-nodes"></i></button></div></div>
+          </article>
+
+          <article class="property-card" data-id="yaba-mini-flat-015" data-location="yaba" data-type="apartment" data-price="2800000" data-bedrooms="1" data-investment="76" data-viewed="144" data-date="2026-07-01" data-features="security balcony" data-title="Premium Mini Flat Yaba">
+            <div class="property-image"><img loading="lazy" src="https://images.unsplash.com/photo-1484154218962-a197022b5858?w=700&q=80" alt="Premium mini flat in Yaba"><span class="badge badge-rent">Available</span><span class="ribbon">Budget</span><button class="icon-btn favorite-btn" type="button" aria-label="Save property"><i class="far fa-heart"></i></button><label class="compare-checkbox"><input type="checkbox" aria-label="Compare Mini Flat"></label></div>
+            <div class="property-info"><p class="price">₦2,800,000/year</p><h3>Premium Mini Flat</h3><p class="location"><i class="fas fa-map-marker-alt"></i> Sabo, Yaba</p><div class="score-row"><span>Commute Score</span><strong>86%</strong></div><div class="score-row"><span>Investment Score</span><strong>76%</strong></div><div class="property-meta"><span><i class="fas fa-bed"></i> 1 Bed</span><span><i class="fas fa-bath"></i> 1 Bath</span><span><i class="fas fa-car"></i> 1 Parking</span><span><i class="fas fa-ruler-combined"></i> 65 sqm</span></div><div class="card-actions"><a href="property-details.html?id=yaba-mini-flat-015" class="btn btn-dark">View Details</a><button class="share-btn" type="button"><i class="fas fa-share-nodes"></i></button></div></div>
+          </article>
+        </div>
+
+        <div class="empty-state" id="no-results" hidden>
+          <i class="fas fa-magnifying-glass-location"></i>
+          <h2>No matching properties</h2>
+          <p>Try a different location, budget, property type, or feature.</p>
+          <button class="btn btn-primary" type="button" id="empty-clear">Reset Search</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="comparison-bar" id="compare-bar">
+    <div class="container">
+      <h4><i class="fas fa-scale-balanced"></i> <span id="compare-count">0</span> Properties Selected</h4>
+      <button id="compare-btn" class="btn btn-primary"><i class="fas fa-columns"></i> Compare Now</button>
+    </div>
+  </div>
+
+  <div class="comparison-modal" id="comparison-modal" aria-hidden="true">
+    <div class="comparison-content">
+      <button class="comparison-close" type="button" aria-label="Close comparison">&times;</button>
+      <h2><i class="fas fa-scale-balanced"></i> Property Comparison</h2>
+      <table class="comparison-table"><thead><tr><th>Feature</th></tr></thead><tbody id="comparison-body"></tbody></table>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="index.html" class="footer-brand">
+            <img src="bulex-homes-logo.png" alt="Bulex Homes logo">
+          </a>
+          <p>Bulex Homes connects clients with verified homes, investment opportunities, and trusted real estate guidance across Lagos.</p>
+          <div class="social-links">
+            <a href="https://www.facebook.com/profile.php?id=61579539584737&mibextid=rS40aB7S9Ucbxw6v" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://x.com/AdegbiteAbdull8" target="_blank" rel="noopener" aria-label="X"><i class="fab fa-x-twitter"></i></a>
+            <a href="https://www.instagram.com/abdullahiadegbiite?igsh=djc5a2Nzbnl6cnU5" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/adegbite-abdullahi-041350308" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://github.com/Bulex00" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://wa.me/message/LBRFONB553XBF1" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="properties.html">Properties</a></li>
+            <li><a href="smart-matcher.html">Smart Matcher</a></li>
+            <li><a href="mortgage-calculator.html">Mortgage Calculator</a></li>
+            <li><a href="book-viewing.html">Book Viewing</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="tel:09168827887">09168827887</a></li>
+            <li><a href="tel:09029418166">09029418166</a></li>
+            <li><a href="tel:07050803661">07050803661</a></li>
+            <li><a href="mailto:info@bulexhomes.ng">info@bulexhomes.ng</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Newsletter</h4>
+          <p>Receive fresh listings, price changes, and investment notes.</p>
+          <form class="newsletter-form">
+            <input type="email" placeholder="Your email" required aria-label="Email for footer newsletter">
+            <button type="submit">Join</button>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom"><span>
+    © <span id="year"></span> Bulex Homes. All rights reserved.
+    </span><div><a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms.html">Terms</a></div></div>
+</div>
+  </footer>
+
+  <a class="whatsapp-fab" href="https://wa.me/message/LBRFONB553XBF1" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><i class="fab fa-whatsapp"></i></a>
+  <button class="back-to-top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+  <script src="main.js"></script>
+</body>
+</html>

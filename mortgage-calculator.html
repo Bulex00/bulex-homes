@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Calculate your mortgage, affordability, and repayment schedule with Bulex Homes.">
+  <title>Mortgage Calculator | Bulex Homes</title>
+  <link rel="icon" type="image/png" href="bulex-homes-logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <div class="site-loader" aria-label="Loading"><img src="bulex-homes-logo.png" alt="Bulex Homes logo"><span></span></div>
+
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="brand-logo" aria-label="Bulex Homes home">
+        <img src="bulex-homes-logo.png" alt="Bulex Homes logo"><span>Bulex Homes</span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <ul class="nav-menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="properties.html">Properties</a></li>
+          <li><a href="agents.html">Agents</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="nav-actions">
+        <button class="theme-toggle" type="button" aria-label="Toggle dark mode"><i class="fas fa-moon"></i></button>
+        <button class="hamburger" type="button" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content" class="calc-page">
+    <div class="container calc-layout">
+      <div class="calc-panel">
+        <p class="eyebrow">Finance Tools</p>
+        <h2>Mortgage & Affordability Calculator</h2>
+        <p style="color:var(--text-light);margin-bottom:2rem;">Estimate your monthly payments and see what you can afford before you buy.</p>
+
+        <form id="mortgage-form">
+          <div class="calc-grid">
+            <div class="calc-group">
+              <label for="mc-price">Property Price (₦)</label>
+              <input type="number" id="mc-price" value="150000000" required>
+            </div>
+            <div class="calc-group">
+              <label for="mc-down">Down Payment (%)</label>
+              <input type="number" id="mc-down" value="20" required>
+            </div>
+            <div class="calc-group">
+              <label for="mc-rate">Interest Rate (%)</label>
+              <input type="number" id="mc-rate" value="15" step="0.1" required>
+            </div>
+            <div class="calc-group">
+              <label for="mc-term">Loan Term (Years)</label>
+              <input type="number" id="mc-term" value="20" required>
+            </div>
+            <div class="calc-group">
+              <label for="mc-income">Annual Income (₦)</label>
+              <input type="number" id="mc-income" value="12000000" required>
+            </div>
+            <div class="calc-group">
+              <label for="mc-expenses">Monthly Expenses (₦)</label>
+              <input type="number" id="mc-expenses" value="300000" required>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary" style="margin-top:1.5rem;"><i class="fas fa-calculator"></i> Calculate</button>
+        </form>
+
+        <div class="affordability-result" id="mc-results" style="display:none;">
+          <h3 id="mc-monthly">₦0.00</h3>
+          <p style="color:rgba(255,255,255,0.8);">Estimated Monthly Payment</p>
+          <div class="result-grid">
+            <div class="result-card"><h4 id="mc-total">₦0</h4><p>Total Repayment</p></div>
+            <div class="result-card"><h4 id="mc-interest">₦0</h4><p>Total Interest</p></div>
+            <div class="result-card"><h4 id="mc-dti">0%</h4><p>Debt-to-Income Ratio</p></div>
+            <div class="result-card"><h4 id="mc-afford">₦0</h4><p>Recommended Budget</p></div>
+          </div>
+        </div>
+      </div>
+
+      <aside style="background:var(--secondary);padding:2.5rem;border-radius:var(--radius);box-shadow:var(--shadow);height:fit-content;">
+        <h3 style="margin-bottom:1rem;"><i class="fas fa-lightbulb" style="color:var(--accent);"></i> Quick Tips</h3>
+        <ul style="color:var(--text-light);line-height:1.8;padding-left:1.2rem;">
+          <li style="margin-bottom:0.75rem;">A down payment of at least 20% typically secures better interest rates.</li>
+          <li style="margin-bottom:0.75rem;">Keep your debt-to-income ratio below 40% for comfortable repayment.</li>
+          <li style="margin-bottom:0.75rem;">Factor in legal fees, agency commission, and renovation costs.</li>
+          <li>Consider rental yield if you plan to lease the property later.</li>
+        </ul>
+        <div style="margin-top:1.5rem;padding:1.25rem;border-radius:16px;background:var(--bg-light);border:1px solid var(--border);">
+          <h4 style="margin-bottom:0.5rem;">Rent vs Buy</h4>
+          <p style="font-size:0.95rem;color:var(--text-light);margin-bottom:1rem;">Compare monthly rent with ownership costs to decide which path suits your finances.</p>
+          <a href="#rent-buy" class="btn btn-dark" style="width:100%;">Open Comparison</a>
+        </div>
+        <a href="properties.html" class="btn btn-dark" style="width:100%;margin-top:1rem;">Browse Properties</a>
+      </aside>
+    </div>
+
+    <div class="container" id="rent-buy" style="margin-top:2rem;">
+      <div class="card" style="padding:2rem;border-radius:24px;box-shadow:var(--shadow);border:1px solid var(--border);">
+        <div class="section-header" style="margin-bottom:1.5rem;">
+          <p class="eyebrow">Decision Support</p>
+          <h2>Rent vs Buy Calculator</h2>
+        </div>
+        <div class="calc-grid">
+          <div class="calc-group">
+            <label for="rent-monthly">Monthly Rent (₦)</label>
+            <input type="number" id="rent-monthly" value="800000">
+          </div>
+          <div class="calc-group">
+            <label for="rent-price">Property Price (₦)</label>
+            <input type="number" id="rent-price" value="150000000">
+          </div>
+          <div class="calc-group">
+            <label for="rent-down">Down Payment (%)</label>
+            <input type="number" id="rent-down" value="20">
+          </div>
+          <div class="calc-group">
+            <label for="rent-rate">Interest Rate (%)</label>
+            <input type="number" id="rent-rate" value="15">
+          </div>
+          <div class="calc-group">
+            <label for="rent-tax">Maintenance + Insurance (₦)</label>
+            <input type="number" id="rent-tax" value="180000">
+          </div>
+          <div class="calc-group">
+            <label for="rent-term">Loan Term (Years)</label>
+            <input type="number" id="rent-term" value="20">
+          </div>
+        </div>
+        <button type="button" id="calculate-rent-buy" class="btn btn-primary" style="margin-top:1.5rem;"><i class="fas fa-balance-scale"></i> Compare</button>
+        <div id="rent-buy-result" style="display:none;margin-top:1.5rem;padding:1.25rem;border-radius:18px;background:var(--bg-light);border:1px solid var(--border);">
+          <h3 id="rent-buy-summary" style="margin-bottom:0.75rem;"></h3>
+          <p id="rent-buy-detail" style="color:var(--text-light);"></p>
+        </div>
+      </div>
+    </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="index.html" class="footer-brand"><img src="bulex-homes-logo.png" alt="Bulex Homes logo"></a>
+          <p>Bulex Homes connects clients with verified homes, investment opportunities, and trusted real estate guidance across Lagos.</p>
+          <div class="social-links">
+            <a href="https://www.facebook.com/profile.php?id=61579539584737" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://x.com/AdegbiteAbdull8" target="_blank" rel="noopener" aria-label="X"><i class="fab fa-x-twitter"></i></a>
+            <a href="https://www.instagram.com/abdullahiadegbiite" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/adegbite-abdullahi-041350308" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://github.com/Bulex00" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://wa.me/message/LBRFONB553XBF1" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+        <div class="footer-col"><h4>Quick Links</h4><ul><li><a href="index.html">Home</a></li><li><a href="properties.html">Properties</a></li><li><a href="agents.html">Agents</a></li><li><a href="about.html">About Us</a></li></ul></div>
+        <div class="footer-col"><h4>Contact</h4><ul><li><a href="tel:09168827887">09168827887</a></li><li><a href="tel:09029418166">09029418166</a></li><li><a href="mailto:abstar080193@gmail.com">abstar080193@gmail.com</a></li></ul></div>
+        <div class="footer-col"><h4>Newsletter</h4><p>Receive fresh listings and investment notes.</p><form class="newsletter-form"><input type="email" placeholder="Your email" required aria-label="Email"><button type="submit">Join</button></form></div>
+      </div>
+      <div class="footer-bottom"><p>&copy; 2026 Bulex Homes. All rights reserved.</p><div><a href="privacy-policy.html">Privacy Policy</a><a href="terms.html">Terms</a></div></div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+  <script src="main.js"></script>
+  <script>
+    document.getElementById('mortgage-form').addEventListener('submit', (e) => {
+      e.preventDefault();
+      const price = parseFloat(document.getElementById('mc-price').value);
+      const downPercent = parseFloat(document.getElementById('mc-down').value);
+      const rate = parseFloat(document.getElementById('mc-rate').value);
+      const term = parseFloat(document.getElementById('mc-term').value);
+      const income = parseFloat(document.getElementById('mc-income').value);
+      const expenses = parseFloat(document.getElementById('mc-expenses').value);
+
+      const downPayment = price * (downPercent / 100);
+      const loanAmount = price - downPayment;
+      const monthlyRate = (rate / 100) / 12;
+      const payments = term * 12;
+
+      let monthly = 0;
+      if (rate === 0) monthly = loanAmount / payments;
+      else monthly = loanAmount * (monthlyRate * Math.pow(1 + monthlyRate, payments)) / (Math.pow(1 + monthlyRate, payments) - 1);
+
+      const totalRepayment = monthly * payments;
+      const totalInterest = totalRepayment - loanAmount;
+      const dti = ((monthly + expenses) / (income / 12)) * 100;
+      const afford = (income / 12) * 0.4 * ((Math.pow(1 + monthlyRate, payments) - 1) / (monthlyRate * Math.pow(1 + monthlyRate, payments)));
+
+      document.getElementById('mc-monthly').textContent = '₦' + monthly.toLocaleString('en-NG', {minimumFractionDigits:2, maximumFractionDigits:2});
+      document.getElementById('mc-total').textContent = '₦' + Math.round(totalRepayment).toLocaleString('en-NG');
+      document.getElementById('mc-interest').textContent = '₦' + Math.round(totalInterest).toLocaleString('en-NG');
+      document.getElementById('mc-dti').textContent = dti.toFixed(1) + '%';
+      document.getElementById('mc-afford').textContent = '₦' + Math.round(afford).toLocaleString('en-NG');
+      document.getElementById('mc-results').style.display = 'block';
+      document.getElementById('mc-results').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    });
+
+    document.getElementById('calculate-rent-buy').addEventListener('click', () => {
+      const rent = parseFloat(document.getElementById('rent-monthly').value);
+      const price = parseFloat(document.getElementById('rent-price').value);
+      const down = parseFloat(document.getElementById('rent-down').value) / 100;
+      const rate = parseFloat(document.getElementById('rent-rate').value) / 100;
+      const term = parseFloat(document.getElementById('rent-term').value);
+      const extras = parseFloat(document.getElementById('rent-tax').value);
+
+      const loan = price * (1 - down);
+      const monthlyRate = rate / 12;
+      const payments = term * 12;
+      const mortgagePayment = rate === 0 ? loan / payments : loan * (monthlyRate * Math.pow(1 + monthlyRate, payments)) / (Math.pow(1 + monthlyRate, payments) - 1);
+      const totalMonthlyCost = mortgagePayment + extras;
+      const result = totalMonthlyCost < rent ? 'Buying is more affordable right now.' : 'Renting is still the more cost-effective option for your current budget.';
+
+      document.getElementById('rent-buy-summary').textContent = result;
+      document.getElementById('rent-buy-detail').textContent = `Estimated monthly ownership cost: ₦${Math.round(totalMonthlyCost).toLocaleString('en-NG')} vs monthly rent: ₦${Math.round(rent).toLocaleString('en-NG')}.`;
+      document.getElementById('rent-buy-result').style.display = 'block';
+      document.getElementById('rent-buy-result').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    });
+  </script>
+</body>
+</html>

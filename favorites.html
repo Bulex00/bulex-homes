@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Saved Favorites | Bulex Homes</title>
+<meta name="description" content="View, search, sort and manage your saved Bulex Homes properties.">
+<link rel="icon" type="image/png" href="bulex-homes-logo.png">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to content</a>
+<nav class="navbar" aria-label="Main navigation">
+  <div class="nav-container">
+    <a href="index.html" class="brand-logo"><img src="bulex-homes-logo.png" alt="Bulex Homes logo" onerror="this.style.display='none'"><span>Bulex Homes</span></a>
+    <ul class="nav-menu">
+      <li><a href="index.html">Home</a></li><li><a href="properties.html">Properties</a></li>
+      <li><a href="agents.html">Agents</a></li><li><a href="about.html">About</a></li>
+      <li><a href="blog.html">Blog</a></li><li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="theme-toggle" aria-label="Toggle dark mode"><i class="fas fa-moon"></i></button>
+      <a href="book-viewing.html" class="btn btn-primary nav-cta"><i class="fas fa-calendar-check"></i> Book Viewing</a>
+      <button class="hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<main id="main-content">
+  <section class="page-header"><div class="container">
+    <p class="eyebrow">Your Browsing History</p>
+    <h1>Recently Viewed</h1>
+    <p>Pick up right where you left off.</p>
+  </div></section>
+
+  <section style="padding-top:2.5rem">
+    <div class="container">
+      <p class="results-line"><span><strong id="recent-count">0</strong> recently viewed properties</span>
+        <button id="clear-history" class="text-link"><i class="fas fa-trash-alt"></i> Clear History</button></p>
+      <div class="saved-grid" id="recent-grid" hidden></div>
+      <div class="page-empty" id="recent-empty" hidden>
+        <i class="far fa-eye"></i>
+        <h2>No recently viewed properties</h2>
+        <p>Properties you open will appear here automatically so you can find them again fast.</p>
+        <a class="btn btn-primary" href="properties.html">Explore Properties</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer"><div class="container">
+  <div class="footer-grid">
+    <div class="footer-col"><p>Bulex Homes connects clients with verified homes, investment opportunities, and trusted real estate guidance across Lagos.</p></div>
+    <div class="footer-col"><h4>Quick Links</h4><ul><li><a href="index.html">Home</a></li><li><a href="properties.html">Properties</a></li><li><a href="agents.html">Agents</a></li><li><a href="about.html">About Us</a></li></ul></div>
+    <div class="footer-col"><h4>Contact</h4><ul><li><a href="tel:09168827887">09168827887</a></li><li><a href="tel:09029418166">09029418166</a></li><li><a href="tel:07050803661">07050803661</a></li><li><a href="mailto:abstar080193@gmail.com">abstar080193@gmail.com</a></li></ul></div>
+    <div class="footer-col"><h4>Newsletter</h4><p>Receive fresh listings, price changes, and investment notes.</p><form class="newsletter-form"><input type="email" placeholder="Your email" aria-label="Email address" required><button type="submit">Join</button></form></div>
+  </div>
+  <div class="footer-bottom"><span>© 2026 Bulex Homes. All rights reserved.</span><div><a href="privacy-policy.html">Privacy Policy</a><a href="terms.html">Terms</a></div></div>
+</div></footer>
+
+<button class="back-to-top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+<a class="whatsapp-fab" href="https://wa.me/message/LBRFONB553XBF1" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><i class="fab fa-whatsapp"></i></a>
+
+<script src="data.js"></script>
+<script src="saved.js"></script>
+<script src="main.js"></script>
+</body>
+</html>

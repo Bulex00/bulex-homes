@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Your recently viewed properties on Bulex Homes.">
+  <title>Recently Viewed | Bulex Homes</title>
+  <link rel="icon" type="image/png" href="bulex-homes-logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <div class="site-loader" aria-label="Loading"><img src="bulex-homes-logo.png" alt="Bulex Homes logo"><span></span></div>
+
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="brand-logo" aria-label="Bulex Homes home">
+        <img src="bulex-homes-logo.png" alt="Bulex Homes logo"><span>Bulex Homes</span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <ul class="nav-menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="properties.html">Properties</a></li>
+          <li><a href="agents.html">Agents</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="nav-actions">
+        <button class="theme-toggle" type="button" aria-label="Toggle dark mode"><i class="fas fa-moon"></i></button>
+        <button class="hamburger" type="button" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="page-header properties-header">
+      <div class="container">
+        <p class="eyebrow">Your History</p>
+        <h1>Recently Viewed</h1>
+        <p>Properties you have looked at recently.</p>
+      </div>
+    </section>
+
+    <section class="properties-section">
+      <div class="container">
+        <div style="display:flex;justify-content:flex-end;margin-bottom:1rem;">
+          <button class="btn btn-dark" id="clear-history" type="button"><i class="fas fa-trash"></i> Clear History</button>
+        </div>
+        <div class="saved-grid" id="viewed-grid"></div>
+        <div class="page-empty" id="viewed-empty">
+          <i class="fas fa-clock-rotate-left"></i>
+          <h2>No recent views</h2>
+          <p>Start browsing properties and we will keep track of them here.</p>
+          <a href="properties.html" class="btn btn-primary">Explore Properties</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="index.html" class="footer-brand"><img src="bulex-homes-logo.png" alt="Bulex Homes logo"></a>
+          <p>Bulex Homes connects clients with verified homes, investment opportunities, and trusted real estate guidance across Lagos.</p>
+          <div class="social-links">
+            <a href="https://www.facebook.com/profile.php?id=61579539584737" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://x.com/AdegbiteAbdull8" target="_blank" rel="noopener" aria-label="X"><i class="fab fa-x-twitter"></i></a>
+            <a href="https://www.instagram.com/abdullahiadegbiite" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/adegbite-abdullahi-041350308" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://github.com/Bulex00" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://wa.me/message/LBRFONB553XBF1" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+        <div class="footer-col"><h4>Quick Links</h4><ul><li><a href="index.html">Home</a></li><li><a href="properties.html">Properties</a></li><li><a href="agents.html">Agents</a></li><li><a href="about.html">About Us</a></li></ul></div>
+        <div class="footer-col"><h4>Contact</h4><ul><li><a href="tel:09168827887">09168827887</a></li><li><a href="tel:09029418166">09029418166</a></li><li><a href="mailto:abstar080193@gmail.com">abstar080193@gmail.com</a></li></ul></div>
+        <div class="footer-col"><h4>Newsletter</h4><p>Receive fresh listings and investment notes.</p><form class="newsletter-form"><input type="email" placeholder="Your email" required aria-label="Email"><button type="submit">Join</button></form></div>
+      </div>
+      <div class="footer-bottom"><p>&copy; 2026 Bulex Homes. All rights reserved.</p><div><a href="privacy-policy.html">Privacy Policy</a><a href="terms.html">Terms</a></div></div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+  <script src="main.js"></script>
+  <script>
+    (function() {
+      const grid = document.getElementById('viewed-grid');
+      const empty = document.getElementById('viewed-empty');
+      let viewed = JSON.parse(localStorage.getItem('bulexRecentlyViewed') || '[]');
+
+      function render() {
+        if (viewed.length === 0) {
+          grid.style.display = 'none';
+          empty.style.display = 'block';
+          return;
+        }
+        empty.style.display = 'none';
+        grid.innerHTML = '';
+        viewed.forEach(item => {
+          const date = new Date(item.date).toLocaleDateString('en-NG', { day:'numeric', month:'short', year:'numeric' });
+          const card = document.createElement('article');
+          card.className = 'property-card';
+          card.innerHTML = `
+            <div class="property-image">
+              <img src="${item.image || 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=700&q=80'}" alt="${item.title}" loading="lazy">
+            </div>
+            <div class="property-info">
+              <p class="price">${item.price || ''}</p>
+              <h3>${item.title}</h3>
+              <p class="location"><i class="fas fa-map-marker-alt"></i> ${item.location || 'Lagos'}</p>
+              <p class="viewed-date"><i class="far fa-clock"></i> Viewed on ${date}</p>
+              <a href="property-details.html?id=${item.id}" class="btn btn-dark" style="margin-top:1rem;width:100%;">View Again</a>
+            </div>`;
+          grid.appendChild(card);
+        });
+      }
+
+      render();
+
+      document.getElementById('clear-history').addEventListener('click', () => {
+        localStorage.removeItem('bulexRecentlyViewed');
+        viewed = [];
+        render();
+        showToast('History cleared');
+      });
+    })();
+  </script>
+</body>
+</html>

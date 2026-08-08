@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Luxury 5-Bedroom Villa in Lekki Phase 1. View details, amenities, mortgage calculator, ROI calculator, and schedule a viewing with Bulex Homes.">
+  <title>Luxury 5-Bedroom Villa | Bulex Homes</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+ <a class="skip-link" href="#main-content">Skip to content</a>
+<nav class="navbar" aria-label="Main navigation">
+  <div class="nav-container">
+    <a href="index.html" class="brand-logo"><img src="bulex-homes-logo.png"
+     alt="Bulex Homes logo"
+     width="55"
+     height="55"
+     loading="eager"
+     onerror="this.style.display='none'"><span>Bulex Homes</span></a>
+    <ul class="nav-menu">
+      <li><a href="index.html">Home</a></li><li><a href="properties.html">Properties</a></li>
+      <li><a href="agents.html">Agents</a></li><li><a href="about.html">About</a></li>
+      <li><a href="blog.html">Blog</a></li><li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="theme-toggle" aria-label="Toggle dark mode"><i class="fas fa-moon"></i></button>
+      <a href="book-viewing.html" class="btn btn-primary nav-cta"><i class="fas fa-calendar-check"></i> Book Viewing</a>
+      <button class="hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+  <main>
+    <section class="property-details">
+      <div class="container">
+        <div class="gallery-main">
+          <img id="gallery-main-img" src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1200&q=80" alt="Luxury Villa Main View">
+        </div>
+        <div class="gallery-thumbs" id="gallery-thumbs"></div>
+        <button id="view-gallery-btn" class="btn btn-dark" style="margin-top: 1rem;"><i class="fas fa-images"></i> View Full Gallery</button>
+
+        <div class="details-content">
+          <div class="details-header">
+            <div>
+              <h1 id="detail-title">Luxury 5-Bedroom Villa</h1>
+              <p id="detail-location" class="location" style="color: var(--text-light); margin-top: 0.5rem;"><i class="fas fa-map-marker-alt"></i> 15 Admiralty Road, Lekki Phase 1, Lagos</p>
+            </div>
+            <div id="detail-price" class="details-price">₦150,000,000</div>
+          </div>
+
+          <div id="detail-meta" class="details-meta">
+            <span><i class="fas fa-bed"></i> 5 Bedrooms</span>
+            <span><i class="fas fa-bath"></i> 6 Bathrooms</span>
+            <span><i class="fas fa-ruler-combined"></i> 600 sqm</span>
+            <span><i class="fas fa-car"></i> 3 Parking</span>
+          </div>
+
+          <h3 style="margin-bottom: 1rem;">Description</h3>
+          <p id="detail-desc" style="margin-bottom: 1.5rem; line-height: 1.8;">This stunning 5-bedroom luxury villa in Lekki Phase 1 represents the pinnacle of modern Nigerian architecture. Designed with meticulous attention to detail, the property features soaring ceilings, floor-to-ceiling windows, and premium finishes throughout. The open-plan living area flows seamlessly into a gourmet kitchen equipped with imported appliances. The master suite includes a private balcony overlooking the lagoon, a walk-in closet, and a spa-inspired ensuite bathroom. Outdoor amenities include an infinity pool, landscaped gardens, and a private gazebo perfect for entertaining.</p>
+
+          <h3 style="margin-bottom: 1rem;">Amenities</h3>
+          <div id="detail-amenities" class="amenities-grid">
+            <div class="amenity-item"><i class="fas fa-swimming-pool"></i> Swimming Pool</div>
+            <div class="amenity-item"><i class="fas fa-dumbbell"></i> Private Gym</div>
+            <div class="amenity-item"><i class="fas fa-wifi"></i> Smart Home System</div>
+            <div class="amenity-item"><i class="fas fa-shield-alt"></i> 24/7 Security</div>
+            <div class="amenity-item"><i class="fas fa-car"></i> Covered Parking</div>
+            <div class="amenity-item"><i class="fas fa-sun"></i> Solar Power Backup</div>
+            <div class="amenity-item"><i class="fas fa-tree"></i> Landscaped Gardens</div>
+            <div class="amenity-item"><i class="fas fa-glass-cheers"></i> Outdoor Entertainment Area</div>
+          </div>
+
+          <div class="dashboard-panel">
+            <div class="dashboard-header">
+              <div>
+                <p class="eyebrow">Investment Dashboard</p>
+                <h3>Neighborhood intelligence and investment outlook</h3>
+              </div>
+              <span class="dashboard-pill">Live insight</span>
+            </div>
+            <div id="detail-hood" class="dashboard-grid"></div>
+            <div id="detail-invest" class="dashboard-grid secondary"></div>
+            <div id="detail-bestfor" class="bestfor-row"></div>
+          </div>
+
+          <div class="agent-card">
+            <img id="agent-photo" src="bulex2.png" alt="Adegboyega Opeyemi">
+            <div class="agent-info">
+              <h4 id="agent-name">Adegboyega Opeyemi</h4>
+              <p id="agent-role" style="color: var(--accent); font-weight: 600;">Senior Luxury Property Consultant</p>
+              <p id="agent-phone" style="font-size: 0.9rem;"><i class="fas fa-phone"></i> +234 916 882 7887</p>
+              <p id="agent-email" style="font-size: 0.9rem;"><i class="fas fa-envelope"></i> ope@bulexhomes.ng</p>
+            </div>
+            <button id="contact-agent-btn" class="btn btn-primary" style="margin-left: auto;"><i class="fas fa-envelope"></i> Contact Agent</button>
+          </div>
+        </div>
+
+        <div class="mortgage-calculator">
+          <h3><i class="fas fa-calculator"></i> Mortgage Calculator</h3>
+          <div class="calc-grid">
+            <div class="calc-group">
+              <label for="calc-price">Property Price (₦)</label>
+              <input type="number" id="calc-price" value="150000000" placeholder="e.g. 150000000">
+            </div>
+            <div class="calc-group">
+              <label for="calc-down">Down Payment (%)</label>
+              <input type="number" id="calc-down" value="20" placeholder="e.g. 20">
+            </div>
+            <div class="calc-group">
+              <label for="calc-rate">Interest Rate (%)</label>
+              <input type="number" id="calc-rate" value="15" step="0.1" placeholder="e.g. 15">
+            </div>
+            <div class="calc-group">
+              <label for="calc-term">Loan Term (Years)</label>
+              <input type="number" id="calc-term" value="20" placeholder="e.g. 20">
+            </div>
+          </div>
+          <button id="calculate-mortgage" class="btn btn-primary" style="margin-top: 1.5rem;"><i class="fas fa-calculator"></i> Calculate Monthly Payment</button>
+          <div class="calc-result" id="calc-result">
+            <p>Estimated Monthly Payment</p>
+            <h4 id="calc-result-amount">₦0.00</h4>
+          </div>
+        </div>
+
+        <div class="roi-calculator">
+          <h3><i class="fas fa-chart-line"></i> Investment ROI Calculator</h3>
+          <p style="color: rgba(255,255,255,0.7); margin-bottom: 1.5rem; font-size: 0.9rem;">Calculate your potential return on investment for this property.</p>
+          <div class="roi-grid">
+            <div class="roi-group">
+              <label for="roi-purchase">Purchase Price (₦)</label>
+              <input type="number" id="roi-purchase" value="150000000" placeholder="e.g. 150000000">
+            </div>
+            <div class="roi-group">
+              <label for="roi-rent">Monthly Rent (₦)</label>
+              <input type="number" id="roi-rent" value="2500000" placeholder="e.g. 2500000">
+            </div>
+            <div class="roi-group">
+              <label for="roi-expenses">Annual Expenses (₦)</label>
+              <input type="number" id="roi-expenses" value="3000000" placeholder="e.g. 3000000">
+            </div>
+            <div class="roi-group">
+              <label for="roi-appreciation">Appreciation Rate (%)</label>
+              <input type="number" id="roi-appreciation" value="8" step="0.1" placeholder="e.g. 8">
+            </div>
+          </div>
+          <button id="calculate-roi" class="btn btn-primary" style="margin-top: 1.5rem;"><i class="fas fa-chart-line"></i> Calculate ROI</button>
+          <div class="roi-result" id="roi-result">
+            <p>Annual ROI</p>
+            <h4 id="roi-result-percent">0%</h4>
+            <p style="margin-top: 1rem;">Estimated Value in 5 Years</p>
+            <h4 id="roi-result-fiveyear">₦0</h4>
+          </div>
+        </div>
+
+        <div class="schedule-section">
+          <h3><i class="fas fa-calendar-check"></i> Schedule a Viewing</h3>
+          <p style="color: var(--text-light); margin-bottom: 1.5rem;">Book a private viewing of this property at your convenience.</p>
+          <form id="schedule-form">
+            <div class="schedule-grid">
+              <div class="form-group">
+                <label for="schedule-name">Full Name</label>
+                <input type="text" id="schedule-name" placeholder="Your full name" required>
+              </div>
+              <div class="form-group">
+                <label for="schedule-phone">Phone Number</label>
+                <input type="tel" id="schedule-phone" placeholder="Your phone number" required>
+              </div>
+              <div class="form-group">
+                <label for="schedule-date">Preferred Date</label>
+                <input type="date" id="schedule-date" required>
+              </div>
+              <div class="form-group">
+                <label for="schedule-time">Preferred Time</label>
+                <select id="schedule-time" required>
+                  <option value="">Select time</option>
+                  <option value="09:00">9:00 AM</option>
+                  <option value="11:00">11:00 AM</option>
+                  <option value="13:00">1:00 PM</option>
+                  <option value="15:00">3:00 PM</option>
+                  <option value="17:00">5:00 PM</option>
+                </select>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary" style="margin-top: 1.5rem;"><i class="fas fa-calendar-check"></i> Schedule Viewing</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="lightbox" id="lightbox">
+    <span class="lightbox-close">&times;</span>
+    <span class="lightbox-nav lightbox-prev"><i class="fas fa-chevron-left"></i></span>
+    <img id="lightbox-img" src="" alt="Gallery Image">
+    <span class="lightbox-nav lightbox-next"><i class="fas fa-chevron-right"></i></span>
+  </div>
+
+  <div class="modal-overlay" id="agent-modal">
+    <div class="modal" style="position: relative;">
+      <span class="modal-close">&times;</span>
+      <h3>Contact Agent</h3>
+      <form id="agent-contact-form">
+        <div class="form-group"><label>Your Name</label><input type="text" placeholder="Enter your name" required></div>
+        <div class="form-group"><label>Your Email</label><input type="email" placeholder="Enter your email" required></div>
+        <div class="form-group"><label>Your Phone</label><input type="tel" placeholder="Enter your phone number" required></div>
+        <div class="form-group"><label>Message</label><textarea placeholder="I am interested in this property..." rows="4" required></textarea></div>
+        <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+      </form>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="index.html" class="footer-brand">
+            <img src="bulex-homes-logo.png"
+     alt="Bulex Homes logo"
+     loading="lazy"
+     width="180"
+     height="60" loading="eager">
+          </a>
+          <p>Bulex Homes connects clients with verified homes, investment opportunities, and trusted real estate guidance across Lagos.</p>
+          <div class="social-links">
+            <a href="https://www.facebook.com/profile.php?id=61579539584737&mibextid=rS40aB7S9Ucbxw6v" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://x.com/AdegbiteAbdull8" target="_blank" rel="noopener" aria-label="X"><i class="fab fa-x-twitter"></i></a>
+            <a href="https://www.instagram.com/abdullahiadegbiite?igsh=djc5a2Nzbnl6cnU5" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/adegbite-abdullahi-041350308" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://github.com/Bulex00" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://wa.me/message/LBRFONB553XBF1" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="properties.html">Properties</a></li>
+            <li><a href="smart-matcher.html">Smart Matcher</a></li>
+            <li><a href="mortgage-calculator.html">Mortgage Calculator</a></li>
+            <li><a href="book-viewing.html">Book Viewing</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="tel:09168827887">09168827887</a></li>
+            <li><a href="tel:09029418166">09029418166</a></li>
+            <li><a href="tel:07050803661">07050803661</a></li>
+            <li><a href="mailto:info@bulexhomes.ng">info@bulexhomes.ng</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Newsletter</h4>
+          <p>Receive fresh listings, price changes, and investment notes.</p>
+          <form class="newsletter-form">
+            <input type="email" placeholder="Your email" required aria-label="Email for footer newsletter">
+            <button type="submit">Join</button>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom"><span>
+    © <span id="year"></span> Bulex Homes. All rights reserved.
+    </span><div><a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms.html">Terms</a></div></div>
+</div>
+  </footer>
+
+  <a class="whatsapp-fab" href="https://wa.me/message/LBRFONB553XBF1" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><i class="fab fa-whatsapp"></i></a>
+  <button class="back-to-top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+  <script src="data.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const params = new URLSearchParams(window.location.search);
+      const property = bulexById(params.get('id'));
+      const galleryImages = bulexGallery(property);
+      const mainImage = document.getElementById('gallery-main-img');
+      const thumbs = document.getElementById('gallery-thumbs');
+
+      if (mainImage) {
+        mainImage.src = U(galleryImages[0], 1400);
+        mainImage.alt = property.title;
+      }
+
+      if (thumbs) {
+        thumbs.innerHTML = galleryImages.map((image, index) => `
+          <img class="gallery-image${index === 0 ? ' active' : ''}" src="${U(image, 400)}" alt="${property.title} view ${index + 1}" loading="lazy">
+        `).join('');
+      }
+
+      document.title = `${property.title} | Bulex Homes`;
+      const meta = document.querySelector('meta[name="description"]');
+      if (meta) {
+        meta.content = `${property.title} in ${property.loc} — ${bulexFormat(property.price, property.rent)}. Full gallery, investment score and neighborhood intelligence from Bulex Homes.`;
+      }
+
+      const headerTitle = document.getElementById('detail-title');
+      const locationText = document.getElementById('detail-location');
+      const priceText = document.getElementById('detail-price');
+      const metaText = document.getElementById('detail-meta');
+      const descText = document.getElementById('detail-desc');
+      const amenitiesGrid = document.getElementById('detail-amenities');
+      const hoodGrid = document.getElementById('detail-hood');
+      const investGrid = document.getElementById('detail-invest');
+      const bestFor = document.getElementById('detail-bestfor');
+      const agentPhoto = document.getElementById('agent-photo');
+      const agentName = document.getElementById('agent-name');
+      const agentRole = document.getElementById('agent-role');
+      const agentPhone = document.getElementById('agent-phone');
+      const agentEmail = document.getElementById('agent-email');
+
+      if (headerTitle) headerTitle.textContent = property.title;
+      if (locationText) locationText.innerHTML = `<i class="fas fa-map-marker-alt"></i> ${property.loc}`;
+      if (priceText) priceText.textContent = bulexFormat(property.price, property.rent);
+      if (metaText) {
+        metaText.innerHTML = `
+          <span><i class="fas fa-bed"></i> ${property.beds} Beds</span>
+          <span><i class="fas fa-bath"></i> ${property.baths} Baths</span>
+          <span><i class="fas fa-ruler-combined"></i> ${property.size} sqm</span>
+          <span><i class="fas fa-car"></i> ${property.park} Parking</span>`;
+      }
+      if (descText) descText.textContent = property.desc;
+      if (amenitiesGrid) {
+        const amenities = ['24/7 Security', 'Power Backup', 'Fiber Internet', 'Dedicated Parking', 'Treated Water', 'Smart Home Wiring']
+          .concat(property.feat.map(f => FEATURE_LABELS[f]).filter(Boolean));
+        amenitiesGrid.innerHTML = amenities.map(a => `<div class="amenity-item"><i class="fas fa-check-circle"></i> ${a}</div>`).join('');
+      }
+
+      if (hoodGrid) {
+        const hoodLabels = ['Overall Score', 'Safety', 'School Quality', 'Hospitals', 'Transport', 'Dining'];
+        hoodGrid.innerHTML = property.hood.map((value, index) => `
+          <div class="score-card">
+            <div class="score-top">
+              <span>${hoodLabels[index]}</span>
+              <strong>${value}/100</strong>
+            </div>
+            <div class="score-bar"><span style="width:${value}%"></span></div>
+          </div>
+        `).join('');
+      }
+
+      if (investGrid) {
+        const [score, yld, roi, appr, rent, demand, risk, occ] = property.inv;
+        const payback = rent > 0 ? `${(property.price / (rent * 12)).toFixed(1)} yrs` : '—';
+        investGrid.innerHTML = `
+          <div class="score-card"><div class="score-top"><span>Investment Score</span><strong>${score}/100</strong></div><div class="score-bar"><span style="width:${score}%"></span></div></div>
+          <div class="score-card"><div class="score-top"><span>Rental Yield</span><strong>${yld}%</strong></div><div class="score-bar"><span style="width:${Math.min(yld * 8, 100)}%"></span></div></div>
+          <div class="score-card"><div class="score-top"><span>ROI</span><strong>${roi}%</strong></div><div class="score-bar"><span style="width:${Math.min(roi * 4, 100)}%"></span></div></div>
+          <div class="score-card"><div class="score-top"><span>Appreciation</span><strong>${appr}%</strong></div><div class="score-bar"><span style="width:${Math.min(appr * 6, 100)}%"></span></div></div>
+          <div class="score-card"><div class="score-top"><span>Monthly Rent</span><strong>₦${rent.toLocaleString('en-NG')}</strong></div></div>
+          <div class="score-card"><div class="score-top"><span>Payback</span><strong>${payback}</strong></div></div>
+          <div class="score-card"><div class="score-top"><span>Demand / Risk</span><strong>${demand} · ${risk}</strong></div></div>
+          <div class="score-card"><div class="score-top"><span>Occupancy</span><strong>${occ}%</strong></div><div class="score-bar"><span style="width:${occ}%"></span></div></div>
+        `;
+      }
+
+      if (bestFor) {
+        const suited = [];
+        if (property.beds >= 4) suited.push('Families');
+        if (property.city === 'Yaba') suited.push('Students');
+        if (property.inv[0] >= 85) suited.push('Investors');
+        if (property.price >= 150000000) suited.push('Luxury Buyers');
+        if (property.type === 'Commercial') suited.push('Commercial Use');
+        bestFor.innerHTML = '<span class="bestfor-label">Best for</span>' + suited.map(item => `<span class="bestfor-chip">${item}</span>`).join('');
+      }
+
+      const agent = BULEX_AGENTS[property.agent];
+      if (agentPhoto) {
+        agentPhoto.src = agent.photo;
+        agentPhoto.alt = agent.name;
+        agentPhoto.onerror = function() {
+          this.onerror = null;
+          this.src = agent.fallback;
+        };
+      }
+      if (agentName) agentName.textContent = agent.name;
+      if (agentRole) agentRole.textContent = agent.role;
+      if (agentPhone) agentPhone.innerHTML = `<i class="fas fa-phone"></i> ${agent.phone}`;
+      if (agentEmail) agentEmail.innerHTML = `<i class="fas fa-envelope"></i> ${agent.email}`;
+    });
+  </script>
+  <script src="main.js"></script>
+</body>
+</html>

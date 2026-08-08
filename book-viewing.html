@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Book a property viewing with Bulex Homes. Schedule a date and time that works for you.">
+  <title>Book a Viewing | Bulex Homes</title>
+  <link rel="icon" type="image/png" href="bulex-homes-logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <div class="site-loader" aria-label="Loading"><img src="bulex-homes-logo.png" alt="Bulex Homes logo"><span></span></div>
+
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="brand-logo" aria-label="Bulex Homes home">
+        <img src="bulex-homes-logo.png" alt="Bulex Homes logo"><span>Bulex Homes</span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <ul class="nav-menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="properties.html">Properties</a></li>
+          <li><a href="agents.html">Agents</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="nav-actions">
+        <button class="theme-toggle" type="button" aria-label="Toggle dark mode"><i class="fas fa-moon"></i></button>
+        <button class="hamburger" type="button" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content" class="calc-page">
+    <div class="container booking-layout">
+      <div>
+        <section class="booking-hero">
+          <div class="booking-hero-content">
+            <p class="eyebrow">Private scheduling</p>
+            <h1>Reserve a premium viewing experience.</h1>
+            <p>Select your preferred property, date, and time. Our agent will confirm your appointment within 2 hours.</p>
+            <div class="booking-hero-badges">
+              <span><i class="fas fa-bolt"></i> Fast confirmation</span>
+              <span><i class="fas fa-shield-alt"></i> Trusted advisors</span>
+              <span><i class="fas fa-home"></i> Luxury listings</span>
+            </div>
+          </div>
+        </section>
+
+        <div class="booking-step-strip">
+          <div><i class="fas fa-check-circle"></i> Luxury concierge booking</div>
+          <div><i class="fas fa-clock"></i> Confirmed in under 2 hours</div>
+          <div><i class="fas fa-phone-volume"></i> Direct agent support</div>
+        </div>
+
+        <div class="calendar-panel">
+          <form id="booking-form">
+            <div class="form-group premium-field-group">
+              <label for="book-property">Select Property</label>
+              <select id="book-property" required>
+                <option value="">Choose a property</option>
+                <option value="lekki-villa-001">Luxury 5-Bedroom Villa — Lekki Phase 1</option>
+                <option value="ikoyi-apartment-002">Modern 3-Bedroom Apartment — Ikoyi</option>
+                <option value="vi-penthouse-003">Waterfront Penthouse Suite — Victoria Island</option>
+                <option value="ajah-duplex-004">Contemporary 4-Bedroom Duplex — Ajah</option>
+                <option value="banana-mansion-005">Executive 6-Bedroom Mansion — Banana Island</option>
+                <option value="ikeja-townhouse-007">GRA 4-Bedroom Townhouse — Ikeja</option>
+              </select>
+            </div>
+            <div class="form-group premium-field-group">
+              <label for="book-date">Preferred Date</label>
+              <div class="date-input-shell">
+                <i class="fas fa-calendar-alt"></i>
+                <input type="date" id="book-date" required>
+              </div>
+            </div>
+            <div class="form-group premium-field-group">
+              <label>Available Time Slots</label>
+              <div class="time-slots" id="time-slots">
+                <button type="button" class="time-slot" data-time="09:00">9:00 AM</button>
+                <button type="button" class="time-slot" data-time="11:00">11:00 AM</button>
+                <button type="button" class="time-slot" data-time="13:00">1:00 PM</button>
+                <button type="button" class="time-slot" data-time="15:00">3:00 PM</button>
+                <button type="button" class="time-slot" data-time="17:00">5:00 PM</button>
+                <button type="button" class="time-slot" data-time="18:30">6:30 PM</button>
+              </div>
+              <input type="hidden" id="book-time" required>
+            </div>
+            <div class="form-group premium-field-group">
+              <label for="book-name">Full Name</label>
+              <input type="text" id="book-name" placeholder="Your full name" required>
+            </div>
+            <div class="form-group premium-field-group">
+              <label for="book-phone">Phone Number</label>
+              <input type="tel" id="book-phone" placeholder="Your phone number" required>
+            </div>
+            <div class="form-group premium-field-group">
+              <label for="book-email">Email Address</label>
+              <input type="email" id="book-email" placeholder="Your email" required>
+            </div>
+            <div class="form-group premium-field-group">
+              <label for="book-notes">Special Requests (Optional)</label>
+              <textarea id="book-notes" rows="3" placeholder="Any specific requirements..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary premium-submit-btn" style="width:100%;"><i class="fas fa-calendar-check"></i> Confirm Booking</button>
+          </form>
+        </div>
+      </div>
+
+      <aside>
+        <div class="booking-summary">
+          <h3><i class="fas fa-info-circle"></i> Booking Summary</h3>
+          <p id="summary-property"><strong>Property:</strong> Not selected</p>
+          <p id="summary-date"><strong>Date:</strong> Not selected</p>
+          <p id="summary-time"><strong>Time:</strong> Not selected</p>
+          <hr style="border-color:rgba(255,255,255,0.15);margin:1.25rem 0;">
+          <p style="font-size:0.9rem;color:rgba(255,255,255,0.7);"><i class="fas fa-phone"></i> Need help? Call 09168827887</p>
+          <a href="https://wa.me/message/LBRFONB553XBF1" target="_blank" class="btn btn-whatsapp" style="width:100%;margin-top:1rem;"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
+        </div>
+
+        <div class="booking-history" id="booking-history-wrap" style="display:none;">
+          <h2 style="margin-bottom:1rem;">Upcoming Bookings</h2>
+          <div id="history-list"></div>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="index.html" class="footer-brand"><img src="bulex-homes-logo.png" alt="Bulex Homes logo"></a>
+          <p>Bulex Homes connects clients with verified homes, investment opportunities, and trusted real estate guidance across Lagos.</p>
+          <div class="social-links">
+            <a href="https://www.facebook.com/profile.php?id=61579539584737" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://x.com/AdegbiteAbdull8" target="_blank" rel="noopener" aria-label="X"><i class="fab fa-x-twitter"></i></a>
+            <a href="https://www.instagram.com/abdullahiadegbiite" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/adegbite-abdullahi-041350308" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://github.com/Bulex00" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://wa.me/message/LBRFONB553XBF1" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+        <div class="footer-col"><h4>Quick Links</h4><ul><li><a href="index.html">Home</a></li><li><a href="properties.html">Properties</a></li><li><a href="agents.html">Agents</a></li><li><a href="about.html">About Us</a></li></ul></div>
+        <div class="footer-col"><h4>Contact</h4><ul><li><a href="tel:09168827887">09168827887</a></li><li><a href="tel:09029418166">09029418166</a><a href="tel:07050803661">07050803661</a></li><li><a href="mailto:info@bulexhomes.ng">info@bulexhomes.ng</a></li></ul></div>
+        <div class="footer-col"><h4>Newsletter</h4><p>Receive fresh listings and investment notes.</p><form class="newsletter-form"><input type="email" placeholder="Your email" required aria-label="Email"><button type="submit">Join</button></form></div>
+      </div>
+      <div class="footer-bottom"><p>&copy; 2026 Bulex Homes. All rights reserved.</p><div><a href="privacy-policy.html">Privacy Policy</a><a href="terms.html">Terms</a></div></div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+  <script src="main.js"></script>
+  <script>
+    (function() {
+      const slots = document.querySelectorAll('.time-slot');
+      const timeInput = document.getElementById('book-time');
+      const propertySelect = document.getElementById('book-property');
+      const dateInput = document.getElementById('book-date');
+      const summaryProperty = document.getElementById('summary-property');
+      const summaryDate = document.getElementById('summary-date');
+      const summaryTime = document.getElementById('summary-time');
+
+      // Set min date to today
+      dateInput.min = new Date().toISOString().split('T')[0];
+
+      slots.forEach(slot => {
+        slot.addEventListener('click', () => {
+          slots.forEach(s => s.classList.remove('selected'));
+          slot.classList.add('selected');
+          timeInput.value = slot.dataset.time;
+          summaryTime.innerHTML = '<strong>Time:</strong> ' + slot.textContent;
+        });
+      });
+
+      propertySelect.addEventListener('change', () => {
+        summaryProperty.innerHTML = '<strong>Property:</strong> ' + propertySelect.options[propertySelect.selectedIndex].text;
+      });
+
+      dateInput.addEventListener('change', () => {
+        summaryDate.innerHTML = '<strong>Date:</strong> ' + new Date(dateInput.value).toLocaleDateString('en-NG', { weekday:'short', day:'numeric', month:'long', year:'numeric' });
+      });
+
+      // Render history
+      const historyWrap = document.getElementById('booking-history-wrap');
+      const historyList = document.getElementById('history-list');
+      const bookings = JSON.parse(localStorage.getItem('bulexBookings') || '[]');
+
+      if (bookings.length > 0) {
+        historyWrap.style.display = 'block';
+        bookings.forEach((b, i) => {
+          const item = document.createElement('div');
+          item.className = 'history-item';
+          item.innerHTML = `
+            <div>
+              <strong>${b.property}</strong><br>
+              <small style="color:var(--text-light);">${b.date} at ${b.time}</small>
+            </div>
+            <button type="button" data-index="${i}" class="cancel-booking" style="color:#dc2626;font-weight:600;background:none;border:none;cursor:pointer;">Cancel</button>
+          `;
+          historyList.appendChild(item);
+        });
+      }
+
+      document.querySelectorAll('.cancel-booking').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const idx = parseInt(btn.dataset.index);
+          bookings.splice(idx, 1);
+          localStorage.setItem('bulexBookings', JSON.stringify(bookings));
+          location.reload();
+        });
+      });
+
+      document.getElementById('booking-form').addEventListener('submit', (e) => {
+        e.preventDefault();
+        if (!timeInput.value) {
+          showToast('Please select a time slot');
+          return;
+        }
+        const newBooking = {
+          property: propertySelect.options[propertySelect.selectedIndex].text,
+          date: dateInput.value,
+          time: timeInput.value,
+          name: document.getElementById('book-name').value,
+          phone: document.getElementById('book-phone').value,
+          email: document.getElementById('book-email').value,
+          notes: document.getElementById('book-notes').value,
+          id: Date.now()
+        };
+        bookings.unshift(newBooking);
+        localStorage.setItem('bulexBookings', JSON.stringify(bookings));
+        showToast('Booking confirmed! We will contact you shortly.');
+        e.target.reset();
+        slots.forEach(s => s.classList.remove('selected'));
+        timeInput.value = '';
+        setTimeout(() => location.reload(), 1200);
+      });
+    })();
+  </script>
+</body>
+</html>
