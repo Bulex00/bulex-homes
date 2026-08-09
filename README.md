@@ -149,30 +149,38 @@ GitHub Pages — website deployment
 
 📁 Project Structure
 
-bulex-homes/  
-├── index.html  
-├── about.html  
-├── agents.html  
-├── blog.html  
-├── book-viewing.html  
-├── compare.html  
-├── contact.html  
-├── faq.html  
-├── favorites.html  
-├── mortgage-calculator.html  
-├── privacy-policy.html  
-├── properties.html  
-├── property-details.html  
-├── recently-viewed.html  
-├── smart-matcher.html  
-├── terms.html  
-├── 404.html  
-├── data.js  
-├── main.js  
-├── property-details.js  
-├── styles.css  
-├── README.md  
-└── image assets  
+bulex-homes/
+├── index.html
+├── about.html
+├── agents.html
+├── blog.html
+├── book-viewing.html
+├── compare.html
+├── contact.html
+├── faq.html
+├── favorites.html
+├── mortgage-calculator.html
+├── privacy-policy.html
+├── properties.html
+├── property-details.html
+├── recently-viewed.html
+├── smart-matcher.html
+├── terms.html
+├── 404.html
+├── data.js
+├── main.js
+├── property-details.js
+├── styles.css
+├── bulex-homes-logo.png
+├── bulex.png
+├── bulex2.png
+├── bulex3.png
+├── bulexN.png
+├── iman.jpg
+├── iman2.png
+├── nisha.png
+├── nishaT.png
+└── README.md  
   
   
 ---
