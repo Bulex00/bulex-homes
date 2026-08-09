@@ -1,111 +1,162 @@
-# Bulex Homes 🏠
+Bulex Homes 🏠
 
-**Real Homes. Real Value. Real Trust.**
+Real Homes. Real Value. Real Trust.
 
-Bulex Homes is a modern real-estate web platform developed as an **AI Web Development Capstone Project**. The platform is designed to provide users with an interactive way to discover properties, view property details, compare listings, save favorites, calculate mortgage payments, and connect with real-estate agents.
+Bulex Homes is a modern real-estate web platform developed as an AI Web Development Capstone Project. The platform provides users with an interactive way to discover properties, view property details, compare listings, save favorites, calculate mortgage payments, explore investment opportunities, and connect with real-estate agents.
 
-## 🌐 Live Demo
+🌐 Live Demo
 
-**[View Bulex Homes Live Website](https://bulex00.github.io/bulex-homes/)**
+View Bulex Homes Live Website
 
-## 📖 Overview
+📖 Overview
 
 Bulex Homes provides a user-friendly digital experience for exploring residential and investment properties.
 
-The platform demonstrates how modern web technologies can be used to create an interactive real-estate website with property discovery tools, calculators, comparison features, booking functionality, and responsive design.
+The project demonstrates the use of modern frontend web technologies to create an interactive, responsive, and feature-rich real-estate platform.
 
-### Project Goals
+Project Goals
 
-- Create a professional real-estate website
-- Provide an intuitive property discovery experience
-- Allow users to compare and save properties
-- Provide useful property and mortgage tools
-- Make the website responsive across devices
-- Demonstrate practical frontend web development skills
+Create a professional real-estate web platform
 
----
+Provide an intuitive property discovery experience
 
-## ✨ Key Features
+Allow users to compare and save properties
 
-### 🏘️ Property Discovery
+Provide useful property and mortgage tools
 
-- Responsive design for desktop, tablet, and mobile
-- Property listings and filtering
-- Property details pages
-- Interactive property image galleries
-- Property comparison
-- Favorites
-- Recently viewed properties
-- Neighborhood information
+Support property viewing and booking
 
-### 🧠 Smart Tools
+Provide responsive experiences across devices
 
-- Smart Property Matcher
-- Mortgage Calculator
-- Investment ROI Calculator
-- Property comparison tools
+Demonstrate practical frontend web development skills
 
-### 📅 Booking & Contact
 
-- Book a Viewing feature
-- Date and time selection
-- Booking summary
-- Contact form validation
-- Google Maps integration
-- WhatsApp direct-chat integration
-
-### 🎨 User Experience
-
-- Responsive navigation
-- Mobile hamburger menu
-- Animated statistics
-- Testimonial slider
-- Back-to-top button
-- Toast notifications
-- Interactive UI components
 
 ---
 
-## 📄 Pages
+✨ Key Features
 
-| Page | Purpose |
-|---|---|
-| `index.html` | Homepage and featured properties |
-| `properties.html` | Property listings and filtering |
-| `property-details.html` | Detailed property information |
-| `agents.html` | Real-estate agent profiles |
-| `about.html` | Company information and mission |
-| `blog.html` | Real-estate news and insights |
-| `contact.html` | Contact form and contact information |
-| `book-viewing.html` | Property viewing scheduling |
-| `smart-matcher.html` | Property recommendation tool |
-| `mortgage-calculator.html` | Mortgage calculation tool |
-| `favorites.html` | Saved properties |
-| `recently-viewed.html` | Recently viewed properties |
-| `compare.html` | Property comparison |
-| `faq.html` | Frequently asked questions |
-| `404.html` | Custom error page |
-| `privacy-policy.html` | Privacy policy |
-| `terms.html` | Terms of service |
+🏘️ Property Discovery
+
+Responsive design for desktop, tablet, and mobile
+
+Property listings and filtering
+
+Property details pages
+
+Interactive property image galleries
+
+Property comparison
+
+Favorites
+
+Recently viewed properties
+
+Neighborhood information
+
+
+🧠 Smart Tools
+
+Smart Property Matcher
+
+Mortgage Calculator
+
+Investment ROI Calculator
+
+Property comparison tools
+
+Dynamic property recommendations
+
+
+📅 Booking & Contact
+
+Book a Viewing feature
+
+Property selection
+
+Date and time selection
+
+Booking summary
+
+Contact form validation
+
+Google Maps integration
+
+WhatsApp direct-chat integration
+
+
+🎨 User Experience
+
+Responsive navigation
+
+Mobile hamburger menu
+
+Animated statistics
+
+Testimonial slider
+
+Back-to-top button
+
+Toast notifications
+
+Interactive UI components
+
+Custom 404 error page
+
+
 
 ---
 
-## 🛠️ Technologies Used
+📄 Pages
 
-- **HTML5** — webpage structure and semantic markup
-- **CSS3** — responsive layouts, Flexbox, Grid, animations, and styling
-- **JavaScript (ES6+)** — interactive functionality and dynamic features
-- **Font Awesome** — interface icons
-- **Google Fonts** — typography
-- **Git** — version control
-- **GitHub** — source-code repository
-- **GitHub Pages** — website deployment
+Page	Purpose
+
+index.html	Homepage, hero section, search, featured properties, statistics, and testimonials
+properties.html	Property listings and filtering
+property-details.html	Detailed property information, gallery, and property tools
+agents.html	Real-estate agent profiles
+about.html	Company information, mission, vision, and values
+blog.html	Real-estate news, insights, and articles
+contact.html	Contact form, contact information, map, and WhatsApp
+book-viewing.html	Property viewing scheduling
+smart-matcher.html	Property recommendation tool
+mortgage-calculator.html	Mortgage calculation tool
+favorites.html	Saved properties
+recently-viewed.html	Recently viewed properties
+compare.html	Property comparison
+faq.html	Frequently asked questions
+404.html	Custom error page
+privacy-policy.html	Privacy policy
+terms.html	Terms of service
+
+
 
 ---
 
-## 📁 Project Structure
+🛠️ Technologies Used
 
-```text
+HTML5 — semantic webpage structure
+
+CSS3 — responsive layouts, Flexbox, Grid, animations, and styling
+
+JavaScript (ES6+) — interactive functionality and dynamic features
+
+Font Awesome — interface icons
+
+Google Fonts — typography
+
+Git — version control
+
+GitHub — source-code management
+
+GitHub Pages — website deployment
+
+
+
+---
+
+📁 Project Structure
+
 bulex-homes/
 ├── index.html
 ├── about.html
@@ -128,8 +179,16 @@ bulex-homes/
 ├── main.js
 ├── property-details.js
 ├── styles.css
-├── README.md
-└── image assets
+├── bulex-homes-logo.png
+├── bulex.png
+├── bulex2.png
+├── bulex3.png
+├── bulexN.png
+├── iman.jpg
+├── iman2.png
+├── nisha.png
+├── nishaT.png
+└── README.md
 
 
 ---
@@ -138,23 +197,23 @@ bulex-homes/
 
 Bulex Homes is a static frontend project and does not require a build process.
 
-Run locally
-
-Clone the repository:
+Clone the Repository
 
 git clone https://github.com/Bulex00/bulex-homes.git
 
-Enter the project directory:
+Enter the Project Directory
 
 cd bulex-homes
 
-You can then open index.html directly in a browser.
+Run Locally
 
-Alternatively, run a local development server:
+The index.html file can be opened directly in a web browser.
+
+Alternatively, use a local development server:
 
 python -m http.server 8000
 
-Then open:
+Then visit:
 
 http://localhost:8000
 
@@ -171,7 +230,7 @@ https://bulex00.github.io/bulex-homes/
 
 Deployment Process
 
-1. Project source code is stored in GitHub.
+1. The project source code is stored in GitHub.
 
 
 2. The main branch is selected for deployment.
@@ -189,15 +248,14 @@ Deployment Process
 
 📞 Contact
 
-Founder / Developer: Adegbite Abdullahi (Bulex)
+Channel	Details
 
-Business Email: info@bulexhomes.ng
+Founder / Developer	Adegbite Abdullahi (Bulex)
+Business Email	info@bulexhomes.ng
+Founder Email	abstar080193@gmail.com
+Phone	091 6882 7887 · 090 2941 8166 · 070 5080 3661
+WhatsApp	070 5080 3661
 
-Founder Email: abstar080193@gmail.com
-
-Phone: 091 6882 7887 · 090 2941 8166 · 070 5080 3661
-
-WhatsApp: 070 5080 3661
 
 
 ---
@@ -224,19 +282,23 @@ Backend integration for booking and contact forms
 
 Database integration for property listings
 
-User authentication
+User authentication and profiles
 
 Real-time property availability
 
 Advanced property search
 
+Property management dashboard
+
+Email notifications
+
 SEO optimization
 
 Open Graph and social sharing metadata
 
-Email notifications
+Improved accessibility
 
-Additional accessibility improvements
+Real-time agent communication
 
 
 
@@ -255,4 +317,3 @@ July – August 2026
 📄 License
 
 © 2026 Bulex Homes. All rights reserved.
-
